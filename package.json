@@ -1,0 +1,37 @@
+{
+  "name": "uzduotis_restoranas",
+  "version": "1.0.0",
+  "description": "Uzduotis Hostinger",
+  "main": "index.js",
+  "scripts": {
+    "test": "set AUTOPREFIXER_GRID=autoplace && react-scripts test",
+    "start": "set AUTOPREFIXER_GRID=autoplace && react-scripts start",
+    "build": "set AUTOPREFIXER_GRID=autoplace && react-scripts build",
+    "eject": "react-scripts eject"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-uglify": "^3.0.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version",
+      "last 1 ie version"
+    ]
+  },
+  "dependencies": {
+    "autoprefixer": "^9.7.1"
+  }
+}

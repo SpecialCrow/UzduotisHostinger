@@ -1,0 +1,71 @@
+.food2 {
+  position: absolute;
+  left: -4.1%;
+  right: 70.16%;
+  top: -0.33%;
+  bottom: 74.48%;
+
+  background: url(food2.png) no-repeat;
+  width: 488px;
+  height: 696px;
+}
+.food3 {
+  grid-area: sidebar3;
+  position: relative;
+  left: 64.51%;
+  right: 7.5%;
+  top: 23.37%;
+  bottom: 54.18%;
+  width: 403px;
+  height: 604px;
+  background: url(food3.png) no-repeat;
+}
+@media (min-width: 800px) {
+  .food1 {
+    width: 100%;
+  }
+}
+---------------------------------
+.food1 {
+  justify-self: end;
+
+  background: url(food1.png) no-repeat;
+  width: 396px;
+  height: 368px;
+}
+.text {
+  font-family: Playfair Display;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 65px;
+  line-height: 87px;
+  text-align: center;
+  letter-spacing: 1.84167px;
+
+  color: orange;
+}
+.food2 {
+  height: 559px;
+  width: 396px;
+
+  background: url(food2.png) no-repeat;
+}
+
+--
+      <div class="food1"></div>
+      <div class="text">
+        <h1>
+          Short Italian Cooking lessons
+        </h1>
+      </div>
+      <div class="food2"></div>
+      <div class="food3"></div>
+
+      .grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
+
+  grid-template-areas: "left content right";
+}

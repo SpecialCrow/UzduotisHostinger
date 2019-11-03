@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css?family=Mr+De+Haviland|Playfair+Display|Montserrat&display=swap");
+@import "./variables";
+@import "./showcaseText";
+
+body {
+  background: $Light;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+/*
+First section 
+*/
+#showcase {
+  background: $secondaryLight;
+  position: absolute;
+  left: 7.5%;
+  right: 0;
+  top: 0;
+  bottom: 69.69%;
+  height: 816px;
+  width: 100%;
+}
+.grid {
+  display: grid;
+  display: grid;
+  position: relative;
+
+  grid-template-columns: 1fr 1fr 1fr;
+
+  grid-template-rows: 1fr;
+
+  grid-template-areas:
+    "left content right"
+    "left1 content1 right1"
+    "left2 content2 right2"
+    "left3 content3 right3";
+}
+
+.food1 {
+  grid-row: 1;
+  grid-column: 3;
+  grid-area: right;
+  right: 0;
+
+  justify-self: end;
+  position: absolute;
+  width: 396px;
+  height: auto;
+  max-width: 80%;
+}
+
+.food2 {
+  grid-row: 1;
+  grid-column: 1;
+  grid-area: left;
+  position: relative;
+  top: 128px;
+
+  height: auto;
+
+  max-width: 100%;
+}
+.food3 {
+  position: absolute;
+  top: 629px;
+
+  justify-self: end;
+  right: 108px;
+  grid-column: 3;
+  grid-column: 3;
+  height: auto;
+  max-width: 100%;
+}
+.shape {
+  grid-column: 1;
+  grid-column: 1;
+  grid-row: 3;
+  grid-row: 3;
+  position: absolute;
+  left: 14.72%;
+  right: 75.49%;
+  width: 140px;
+}
+
+.brand {
+  grid-row: 1;
+  grid-column: 2;
+  grid-area: content;
+
+  justify-self: center;
+  font-family: Mr De Haviland, cursive;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 53px;
+  letter-spacing: 1.13333px;
+  margin-top: 64px;
+  text-align: center;
+  color: $Dark;
+}
+
+/*
+Second section, motivational words
+*/
+#second {
+  position: relative;
+  left: 7.5%;
+  right: 0%;
+  .motivational {
+    grid-row: 2;
+    grid-column: 1;
+    font-family: Playfair Display, serif;
+    color: $Dark;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3.25vw;
+    line-height: 67px;
+    letter-spacing: 0.816667px;
+    grid-area: left1;
+    grid-column: 1;
+
+    grid-column: 1/3;
+
+    margin-top: 342px;
+    margin-bottom: 250px;
+
+    img {
+      float: right;
+      margin-right: 6rem;
+    }
+  }
+  .name {
+    font-family: Mr De Haviland;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 53px;
+    letter-spacing: 1.13333px;
+    text-align: right;
+    margin-top: 58px;
+    color: $Dark;
+  }
+}
+/*
+Third section
+*/
+
+#third {
+  position: relative;
+  left: 7.5%;
+  right: 0;
+  grid-column-gap: 3rem;
+
+  .food4 {
+    grid-row: 3;
+    grid-column: 1;
+    position: absolute;
+    grid-area: left2;
+
+    width: 100%;
+    height: auto;
+  }
+  .parag {
+    grid-row: 3;
+    grid-column: 2;
+    grid-area: content2;
+    font-family: Montserrat, sans-serif;
+    color: $Dark;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.228667px;
+    width: 100%;
+  }
+  .food5 {
+    grid-row: 4;
+    grid-column: 2;
+    position: absolute;
+    grid-area: content3;
+    width: 100%;
+    height: auto;
+    margin-bottom: 340px;
+    margin-top: 18px;
+  }
+  .shape2 {
+    grid-row: 4;
+    grid-column: 1;
+    position: absolute;
+    grid-area: left3;
+    top: 500px;
+  }
+}
+
+@import "./media";

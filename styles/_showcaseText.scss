@@ -1,0 +1,45 @@
+.text {
+  position: relative;
+  bottom: 300px;
+
+  grid-area: content1;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 4vw;
+  line-height: 87px;
+  text-align: center;
+  font-family: Playfair Display, serif;
+  letter-spacing: 1.84167px;
+
+  .path {
+    position: relative;
+    bottom: 30px;
+    left: 20%;
+  }
+  .btn {
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    bottom: 30px;
+
+    .btn1 {
+      background: $secondary;
+      border: none;
+      color: white;
+      padding: 21px 42px;
+
+      text-decoration: none;
+      display: inline-block;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 17px;
+      color: $Dark;
+      text-align: center;
+      letter-spacing: 0.396667px;
+      text-transform: uppercase;
+    }
+  }
+}

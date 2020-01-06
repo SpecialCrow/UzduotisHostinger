@@ -1,0 +1,111 @@
+
+import static java.lang.System.in;
+import java.util.Arrays;
+import java.util.Scanner; 
+
+
+class MultithreadingDemo extends Thread 
+{ 
+     private int[] array;
+      private int[] result;
+     private int left;
+    private int right;
+    int[] resultArr;
+
+    public MultithreadingDemo(int[] array, int i, int j)
+    {
+        this.array=array;
+        this.left  = i;
+        this.right = j;
+    }
+   
+    public void run() 
+    { 
+        try
+        { 
+
+            
+            
+                 System.out.println (
+                  "Not sorted Thread is running and arrays are:" + Arrays.toString(array))
+                    ; 
+                 Arrays.sort(array);
+                            System.out.println (
+                  "Thread is running and arrays are:" + Arrays.toString(array))
+                    ; 
+
+                            
+                                    
+        } 
+        catch (Exception e) 
+        { 
+            // Throwing an exception 
+            System.out.println ("Exception is caught"); 
+        } 
+    } 
+} 
+  
+// Main Class 
+public class Vienetinis
+{ 
+    int sizeOfArray;
+    
+    /**
+     *
+     * @param arrayToSort
+     * @param sizeOfArray
+     */
+    public Vienetinis(int[] arrayToSort, int sizeOfArray) {
+    this.sizeOfArray = sizeOfArray;
+}
+
+    public static int [] creatingArray(int sizeOfArray) {
+    int [] arrayToSort = new int[sizeOfArray];
+    int arrayLength = arrayToSort.length;
+    for (int counter = 0; counter<arrayLength; counter++){
+        arrayToSort[counter] = (int)(8000*Math.random());
+    }
+    return arrayToSort;
+}
+    public static void main(String[] args) throws InterruptedException 
+    { 
+        Scanner myObj = new Scanner(System.in);
+        System.out.printf("Iveskite kiek norite giju\n");
+        int n = myObj.nextInt();
+        System.out.println("Jus pasirinkote " + n + "gijas");
+        System.out.printf("Iveskite masyvo ilgi\n");
+        int c = myObj.nextInt(); 
+        System.out.println("Masyvo dydis: "+c);
+        int bulka = c*n;
+        int[] result = new int[bulka];
+        int count = 0;
+      
+        for (int i=0; i<n; i++) 
+        { 
+            int j;
+            int [] a = creatingArray(c);
+   
+            for (j = 0; j < c; j++) {
+                result[count] = a[j];
+                count++;
+            }
+                
+            MultithreadingDemo object = new MultithreadingDemo(a,0, a.length-1);
+            
+            if (i != n-1) {
+                object.start(); 
+                object.join();
+            }
+            else
+            {
+            break;
+            }
+            
+        } 
+                Arrays.sort(result);
+                        System.out.println (
+                  "Sulietas masyvas:" +Arrays.toString(result));
+    //int res[]= mr.sort(0,arr.length-1);
+    }
+    
+} 

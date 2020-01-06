@@ -1,0 +1,69 @@
+<div className="container-fluid h-100">
+        <div className="columns">
+          <div className="row">
+            <div className="col-md-4 bg-dark ">
+              <div className="input-group mb-3 mt-2">
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Create room"
+                  aria-label="Create room"
+                  aria-describedby="button-addon2"
+                />
+                <div className="input-group-append">
+                  <button
+                    className="btn btn-outline-secondary"
+                    type="button"
+                    id="button-addon2"
+                  >
+                    Create
+                  </button>
+                </div>
+              </div>
+              <div className="input-group mb-3">
+                <div className="input-group-prepend">
+                  <span className="input-group-text" id="basic-addon1">
+                    O
+                  </span>
+                </div>
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Search"
+                  aria-label="Search"
+                  aria-describedby="basic-addon1"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      body {
+  display: grid;
+  place-items: center;
+  grid:
+    "newform chat-title" 70px
+    "roomlist chat-message" 1fr
+    "sendmessage chat-form" 78px
+    /275px 1fr;
+  max-height: 800px;
+  min-width: 800px;
+  max-width: 100px;
+  width: 100%;
+  height: 100vh;
+}
+.newform,
+.roomlist,
+.sendmessage {
+  background: blue;
+}
+
+.newform {
+  z-index: 1;
+}
+.chat-title,
+.chat-form {
+  background: #eee;
+}
